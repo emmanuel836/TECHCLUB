@@ -1,0 +1,110 @@
+
+#omega{
+    min-height: 500px;
+    background-image: url(images/backimage.png);
+    background-repeat: no-repeat;
+     background-size: cover; 
+    background-position: center;
+    /* background-color: #0a0909; */
+}
+@media (max-width: 768px) {
+    #omega{
+        /* background-size: contain; Or adjust to your preference */
+    }
+}
+.navbar-toggler {
+    /* border-color: orange; */
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='orange' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar{
+    /* background-color: #0a0909; */
+}
+.nav-link{
+    /* background-color: #0a0909; */
+    color: rgb(244, 135, 46);
+}
+.nav-link:hover{
+    color: white !important;
+}
+.nav-link:active{
+    color: white !important;
+
+}
+#navlist{
+    margin-right: 50px;
+}
+.dropdown-menu{
+    background-color: #0a0909;
+}
+.dropdown-item{
+    color: white;
+}
+.dropdown-item:hover{
+    background-color: rgb(244, 135, 46);
+    color: black    !important;
+}
+
+/* search bar section */
+@media (min-width: 769px) {
+   .search-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    /* position: relative; */
+}
+}
+@media (max-width: 768px) {
+    .search-container {
+    /* margin-top: 100px; */
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    /* position: relative; */
+}
+}
+
+.search-bar input {
+    background-color: #111; /* Dark input */
+    border: 1px solid rgb(244, 135, 46);
+    color: white;
+    border-right: none; /* Remove right border so it merges with button */
+    border-radius: 25px 0 0 25px; /* Rounded left corners only */
+
+}
+
+.search-bar input::placeholder {
+    color: #ccc;
+}
+
+.search-bar input:focus {
+    background-color: #1a1a1a;
+    border-color: rgb(244, 135, 46);
+    box-shadow: 0 0 5px rgb(244, 135, 46);
+    color: white;
+}
+
+.btn-search {
+    background-color: rgb(244, 135, 46);
+    margin-left: -7px; /* Overlap with input */
+    color: black;
+    border: 1px solid rgb(244, 135, 46); /* Match border with input */
+    border-radius: 0 25px 25px 0; /* Rounded right corners only */
+    transition: 0.3s;
+}
+
+.btn-search:hover {
+    background-color: darkorange;
+    color: white;
+}
+/* text-header section */
+@media (min-width: 769px) {
+    #header{
+        margin-top: 100px;
+        text-align: center;
+        color: white;
+    }
+}
