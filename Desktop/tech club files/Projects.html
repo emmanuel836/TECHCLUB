@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechClub - Projects</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="Projects.css">
+
+  <!-- Header & Footer CSS -->
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loadingScreen" style="display: none;"></div>
+
+  <!-- Animated background particles -->
+  <div class="bg-particles" id="particles"></div>
+
+  <!-- Header will load here -->
+  <header id="header"></header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="hero-title">Our Amazing Projects</h1>
+      <p class="hero-subtitle">Discover the innovative solutions we've crafted with cutting-edge technology</p>
+    </div>
+  </section>
+
+  <!-- Filter Section -->
+  <section class="container">
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="web">Web Development</button>
+      <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+      <button class="filter-btn" data-filter="ai">AI & ML</button>
+      <button class="filter-btn" data-filter="blockchain">Blockchain</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid" id="projectsGrid">
+      <!-- Project 1 -->
+      <div class="project-card" data-category="web" data-delay="0">
+        <div class="project-image">
+          <i class="project-icon bi bi-globe"></i>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">E-Commerce Platform</h3>
+          <p class="project-description">A modern, responsive e-commerce platform built with React and Node.js, featuring real-time inventory management and secure payment processing.</p>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Stripe</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn-modern btn-primary-modern" onclick="openModal('project1')">
+              <i class="bi bi-eye"></i> View Details
+            </a>
+            <a href="#" class="btn-modern btn-secondary-modern">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card" data-category="mobile" data-delay="0.1">
+        <div class="project-image">
+          <i class="project-icon bi bi-phone"></i>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Fitness Tracker App</h3>
+          <p class="project-description">Cross-platform mobile app for fitness tracking with AI-powered workout recommendations and social features.</p>
+          <div class="project-tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">APIs</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn-modern btn-primary-modern" onclick="openModal('project2')">
+              <i class="bi bi-eye"></i> View Details
+            </a>
+            <a href="#" class="btn-modern btn-secondary-modern">
+              <i class="bi bi-download"></i> Download
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card" data-category="ai" data-delay="0.2">
+        <div class="project-image">
+          <i class="project-icon bi bi-robot"></i>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">AI Chatbot Assistant</h3>
+          <p class="project-description">Intelligent chatbot powered by natural language processing, capable of handling customer support and complex queries.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">NLP</span>
+            <span class="tag">API</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn-modern btn-primary-modern" onclick="openModal('project3')">
+              <i class="bi bi-eye"></i> View Details
+            </a>
+            <a href="#" class="btn-modern btn-secondary-modern">
+              <i class="bi bi-chat-dots"></i> Try Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card" data-category="blockchain" data-delay="0.3">
+        <div class="project-image">
+          <i class="project-icon bi bi-currency-bitcoin"></i>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">DeFi Trading Platform</h3>
+          <p class="project-description">Decentralized finance platform for cryptocurrency trading with smart contract integration and yield farming features.</p>
+          <div class="project-tags">
+            <span class="tag">Solidity</span>
+            <span class="tag">Web3.js</span>
+            <span class="tag">Ethereum</span>
+            <span class="tag">React</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn-modern btn-primary-modern" onclick="openModal('project4')">
+              <i class="bi bi-eye"></i> View Details
+            </a>
+            <a href="#" class="btn-modern btn-secondary-modern">
+              <i class="bi bi-link-45deg"></i> Launch App
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card" data-category="web" data-delay="0.4">
+        <div class="project-image">
+          <i class="project-icon bi bi-cloud"></i>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Cloud Dashboard</h3>
+          <p class="project-description">Comprehensive cloud management dashboard with real-time monitoring, analytics, and resource optimization tools.</p>
+          <div class="project-tags">
+            <span class="tag">Vue.js</span>
+            <span class="tag">AWS</span>
+            <span class="tag">D3.js</span>
+            <span class="tag">Docker</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn-modern btn-primary-modern" onclick="openModal('project5')">
+              <i class="bi bi-eye"></i> View Details
+            </a>
+            <a href="#" class="btn-modern btn-secondary-modern">
+              <i class="bi bi-box-arrow-up-right"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card" data-category="ai" data-delay="0.5">
+        <div class="project-image">
+          <i class="project-icon bi bi-camera"></i>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Computer Vision System</h3>
+          <p class="project-description">Advanced computer vision system for object detection and recognition in real-time video streams with high accuracy.</p>
+          <div class="project-tags">
+            <span class="tag">OpenCV</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">YOLO</span>
+            <span class="tag">GPU</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn-modern btn-primary-modern" onclick="openModal('project6')">
+              <i class="bi bi-eye"></i> View Details
+            </a>
+            <a href="#" class="btn-modern btn-secondary-modern">
+              <i class="bi bi-play-circle"></i> Watch Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div class="project-modal" id="projectModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div id="modalContent">
+        <div class="loading"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer will load here -->
+  <footer id="footer"></footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script to dynamically load header & footer -->
+  <script>
+    async function loadPartials() {
+      document.getElementById("header").innerHTML = await (await fetch("header.html")).text();
+      document.getElementById("footer").innerHTML = await (await fetch("footer.html")).text();
+    }
+    loadPartials();
+  </script>
+  
+  <!-- Custom JavaScript -->
+  <script src="Projects.js"></script>
+</body>
+</html>
