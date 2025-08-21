@@ -1,0 +1,94 @@
+        .api-design {
+            background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            position: relative;
+            background-image: url(images/backimage.png);
+        }
+
+        .api-design .section-title {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #f8a36a;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .api-design .section-subtitle {
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+
+        .api-card {
+            background: linear-gradient(145deg, #000000, #111111);
+            border: 2px solid #c3b5b5;
+            border-radius: 150px;
+            transition: all 0.3s ease;
+            min-height: 280px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .api-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 102, 0, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .api-card:hover::before {
+            left: 100%;
+        }
+
+        .api-card:hover {
+            transform: translateY(-8px);
+            border-color: #ff6600;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 102, 0, 0.4);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem auto;
+            background: linear-gradient(45deg, #ff6600, #e6d7cd);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .api-card:hover .card-icon {
+            transform: scale(1.1);
+        }
+
+        .card-icon i {
+            font-size: 35px;
+            color: white;
+        }
+
+        .api-card .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #ff6600;
+            text-align: center;
+        }
+
+        .api-card .card-text {
+            font-size: 0.95rem;
+            color: #f5f5f5;
+            line-height: 1.6;
+            text-align: center;
+            padding: 0 10px;
+        }
